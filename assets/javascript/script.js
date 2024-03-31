@@ -6,14 +6,15 @@ const firstMove = ['Attempt Takedown', 'Pull guard'];
 const moveTop = ['Pass Guard', 'Attempt Leglock'];
 const moveBottom = ['Attempt Sweep', 'Attempt Submission'];
 const block = 'Blocked move';
-const guardPassed = ['Attempt side control', 'Attempt for mount']
+const guardPassed = ['Attempt side control', 'Attempt for mount'];
+const tutorial = document.querySelector('.tutorial');
 
-const gameStart = document.querySelector('#main-game').innerHtml(``)
 
 var difficulty = '';
 
+let gameStart = document.querySelector('#main-game')
 function gameOpener(){
-    document.querySelector('#main-game').innerHTML = `<div class="start-menu" id="start-match">
+    gameStart.innerHTML = `<div class="start-menu" id="start-match">
     <p>Start Match</p>
 </div>
 <div class="start-menu" id="difficulty">
@@ -29,6 +30,7 @@ function attachEventListeners(){
 
     const difficultyDiv = document.querySelector('#difficulty');
     const matchDiv = document.querySelector('#start-match');
+    const rules = document.querySelector('#rules');
     
     if (difficultyDiv){
         difficultyDiv.addEventListener('click', function(){
@@ -38,15 +40,18 @@ function attachEventListeners(){
         matchDiv.addEventListener('click', function(){
             startMatch();
         })
+    if (rules){
+        rules.addEventListener('click', function(){
+            tutorial.classList.remove('hidden');
+        })
+    }
     
 }}
 
-function startMatch(){
 
-}
 
 function difficultyPage(){
-    document.querySelector('#main-game').innerHTML = `<div class="start-menu belts" id="white-belt">
+    gameStart.innerHTML = `<div class="start-menu belts" id="white-belt">
         <p>White Belt</p>
         <img src='/assets/images/-BJJ_White_Belt.png' alt='White belt'>
         </div>
