@@ -10,7 +10,7 @@ const guardPassed = ['Attempt side control', 'Attempt for mount']
 
 const gameStart = document.querySelector('#main-game').innerHtml(``)
 
-let difficulty = '';
+var difficulty = '';
 
 function gameOpener(){
     document.querySelector('#main-game').innerHTML = `<div class="start-menu" id="start-match">
