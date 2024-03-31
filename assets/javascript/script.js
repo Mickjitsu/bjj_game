@@ -29,7 +29,14 @@ function attachEventListeners(){
     const difficultyDiv = document.querySelector('#difficulty');
     
     if (difficultyDiv){
-        difficultyDiv.addEventListener('click', function(){ document.querySelector('#main-game').innerHTML = `<div class="start-menu belts" id="white-belt">
+        difficultyDiv.addEventListener('click', function(){
+            difficultyPage();
+        })
+        
+}}
+
+function difficultyPage(){
+    document.querySelector('#main-game').innerHTML = `<div class="start-menu belts" id="white-belt">
         <p>White Belt</p>
         <img src='/assets/images/-BJJ_White_Belt.png' alt='White belt'>
         </div>
@@ -41,11 +48,8 @@ function attachEventListeners(){
         <p>Black Belt</p>
         <img src='/assets/images/-BJJ_Black_Belt.png' alt='Black belt'>
         </div>`;
-    
-        attachBeltListener()})
-        
-}}
-
+        attachBeltListener()
+}
 function attachBeltListener(){
     document.querySelector('#white-belt').addEventListener('click', function(){
         difficulty = 'easy';
