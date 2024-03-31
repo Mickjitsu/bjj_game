@@ -28,13 +28,22 @@ attachEventListeners()
 function attachEventListeners(){
 
     const difficultyDiv = document.querySelector('#difficulty');
+    const matchDiv = document.querySelector('#start-match');
     
     if (difficultyDiv){
         difficultyDiv.addEventListener('click', function(){
             difficultyPage();
+        })}
+    if (matchDiv){
+        matchDiv.addEventListener('click', function(){
+            startMatch();
         })
-        
+    
 }}
+
+function startMatch(){
+
+}
 
 function difficultyPage(){
     document.querySelector('#main-game').innerHTML = `<div class="start-menu belts" id="white-belt">
