@@ -10,7 +10,7 @@ const guardPassed = ['Attempt side control', 'Attempt for mount']
 
 const gameStart = document.querySelector('#main-game').innerHtml(``)
 
-let difficulty =''
+let difficulty = '';
 
 function gameOpener(){
     document.querySelector('#main-game').innerHTML = `<div class="start-menu" id="start-match">
@@ -44,21 +44,20 @@ function attachEventListeners(){
     
         attachBeltListener()})
         
-        function attachBeltListener(){
-            document.querySelector('#white-belt').addEventListener('click', function(){
-                difficulty = 'easy';
-                console.log('Difficulty set to easy')
-            });
-            document.querySelector('#purple-belt').addEventListener('click', function(){
-                difficulty = 'medium';
-                console.log('Difficulty set to medium')
-            });
-            document.querySelector('#black-belt').addEventListener('click', function(){
-                difficulty = 'hard';
-                console.log('Difficulty set to hard')
-            });
-        }
-
 }}
 
+function attachBeltListener(){
+    document.querySelector('#white-belt').addEventListener('click', function(){
+        difficulty = 'easy';
+        console.log('Difficulty set to easy')
+    });
+    document.querySelector('#purple-belt').addEventListener('click', function(){
+        difficulty = 'medium';
+        console.log('Difficulty set to medium')
+    });
+    document.querySelector('#black-belt').addEventListener('click', function(){
+        difficulty = 'hard';
+        console.log('Difficulty set to hard')
+    });
+}
 
