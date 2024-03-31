@@ -1,5 +1,6 @@
 body{
     height: 100vh;
+    background: url(/assets/images/bjj_background.jpg) no-repeat center center/cover;
 }
 
 header{
@@ -7,14 +8,14 @@ header{
 }
 #game-header{
     height: 100px;
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     border: 2px solid black;
 }
 #main-game{
     height: 300px;
-    width: 90%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -41,9 +42,35 @@ header{
 
 .start-menu:hover{
     background-color: #007bff;
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .start-menu-clicked {
     background-color: #0056b3; 
   }
+
+.belts > img{
+    width: 180px;
+    max-height: 80px;
+}
+
+.belts{
+    max-height: 150px;
+    border: 0px;
+}
+
+  @media screen and (min-width: 789px) {
+     
+    #main-game{
+        max-width: 800px;
+        height: 400px;
+    }
+    #game-header{
+        max-width: 400px;
+    }
+    }
+    @media screen and (max-width: 789px){
+        #game-header{
+            max-width: 300px;
+        }
+    }
