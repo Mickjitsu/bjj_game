@@ -50,18 +50,22 @@ function difficultyPage(){
         </div>`;
         attachBeltListener()
 }
+
 function attachBeltListener(){
     document.querySelector('#white-belt').addEventListener('click', function(){
         difficulty = 'easy';
         console.log('Difficulty set to easy')
+        gameOpener()
     });
     document.querySelector('#purple-belt').addEventListener('click', function(){
         difficulty = 'medium';
         console.log('Difficulty set to medium')
+        gameOpener()
     });
     document.querySelector('#black-belt').addEventListener('click', function(){
         difficulty = 'hard';
         console.log('Difficulty set to hard')
+        gameOpener()
     });
 }
 
