@@ -92,13 +92,6 @@ function attachBeltListener(){
 };
 
 function startMatch(){
-    gameStart.innerHTML = `
-    <div class='game-area'>
-    <div class='game-choice' id ='wrestling'>Wrestling</div>
-    <div class='game-choice' id ='muay-thai'>Muay Thai</div>
-    <div class='game-choice' id ='jiu-jitsu'>Jiu Jitsu</div>
-    <div class='game-choice' id='boxing'>Boxing</div>
-    <div class='game-choice' id='Karate'>Karate</div>
-    </div>`
+    gameStart.innerHTML = 
 }
 
