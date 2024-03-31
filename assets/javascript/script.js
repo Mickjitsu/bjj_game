@@ -1,26 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
     gameOpener();
     attachEventListeners();
-})
-const firstMove = ['Attempt Takedown', 'Pull guard'];
-const moveTop = ['Pass Guard', 'Attempt Leglock'];
-const moveBottom = ['Attempt Sweep', 'Attempt Submission'];
-const block = 'Blocked move';
-const guardPassed = ['Attempt side control', 'Attempt for mount'];
-const rock = 'rock';
-const paper = 'paper';
-const scissors = 'scissors';
-const lizard = 'lizard';
-const spock = 'spock'
-const gameChoices = [rock, paper, scissors, lizard, spock];
-const tutorial = document.querySelector('.tutorial');
-const stages = {
-    START: 'start',
-    TOP: 'top',
-    BOTTOM: 'bottom',
-    GUARD_PASSED: 'guardPassed'
-}
+});
 
+const wrestling = 'wrestling';
+const muayThai = 'muay thai';
+const jiuJitsu = 'jiujitsu';
+const boxing = 'boxing';
+const karate = 'karate';
+const gameChoices = [wrestling, muayThai, jiuJitsu, boxing, karate];
+const tutorial = document.querySelector('.tutorial');
 
 var difficulty = '';
 
@@ -52,7 +41,7 @@ function attachEventListeners(){
     if (matchDiv){
         matchDiv.addEventListener('click', function(){
             startMatch();
-        })
+        })}
     if (rules){
         rules.addEventListener('click', function(){
             tutorial.classList.remove('hidden');
@@ -64,7 +53,7 @@ function attachEventListeners(){
         })
     }
     
-}}
+}
 
 
 
@@ -100,5 +89,16 @@ function attachBeltListener(){
         console.log('Difficulty set to hard')
         gameOpener()
     });
+};
+
+function startMatch(){
+    gameStart.innerHTML = `
+    <div class='game-area'>
+    <div class='game-choice' id ='wrestling'>Wrestling</div>
+    <div class='game-choice' id ='muay-thai'>Muay Thai</div>
+    <div class='game-choice' id ='jiu-jitsu'>Jiu Jitsu</div>
+    <div class='game-choice' id='boxing'>Boxing</div>
+    <div class='game-choice' id='Karate'>Karate</div>
+    </div>`
 }
 

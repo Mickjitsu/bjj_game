@@ -89,6 +89,22 @@ header{
     border: none;
     background: none;
   }
+
+  .game-area{
+    width: 80%;
+    height: 600px;
+    border: 2px solid black;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 10%;
+  }
+
+  .game-choice{
+    margin: 2rem;
+  }
   @media screen and (min-width: 789px) {
      
     #main-game{
@@ -102,5 +118,12 @@ header{
     @media screen and (max-width: 789px){
         #game-header{
             max-width: 300px;
+        }
+        #main-game{
+            max-width:70%;
+            height: 400px;
+        }
+        .game-area{
+            width: 80%;
         }
     }
