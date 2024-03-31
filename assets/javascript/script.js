@@ -31,6 +31,7 @@ function attachEventListeners(){
     const difficultyDiv = document.querySelector('#difficulty');
     const matchDiv = document.querySelector('#start-match');
     const rules = document.querySelector('#rules');
+    const close = document.querySelector('.close');
     
     if (difficultyDiv){
         difficultyDiv.addEventListener('click', function(){
@@ -43,6 +44,11 @@ function attachEventListeners(){
     if (rules){
         rules.addEventListener('click', function(){
             tutorial.classList.remove('hidden');
+        })
+    }
+    if (close){
+        close.addEventListener('click', function(){
+            tutorial.classList.add('hidden');
         })
     }
     
