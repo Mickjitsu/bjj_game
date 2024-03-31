@@ -22,6 +22,7 @@ function gameOpener(){
 <div class="start-menu" id="rules">
     <p>Tutorial</p>
 </div>`
+attachEventListeners()
 }
 
 function attachEventListeners(){
