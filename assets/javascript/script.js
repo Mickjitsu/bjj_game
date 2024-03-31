@@ -18,7 +18,6 @@ const stages = {
     START: 'start',
     TOP: 'top',
     BOTTOM: 'bottom',
-    BLOCKED: 'blocked',
     GUARD_PASSED: 'guardPassed'
 }
 
