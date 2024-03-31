@@ -7,7 +7,20 @@ const moveTop = ['Pass Guard', 'Attempt Leglock'];
 const moveBottom = ['Attempt Sweep', 'Attempt Submission'];
 const block = 'Blocked move';
 const guardPassed = ['Attempt side control', 'Attempt for mount'];
+const rock = 'rock';
+const paper = 'paper';
+const scissors = 'scissors';
+const lizard = 'lizard';
+const spock = 'spock'
+const gameChoices = [rock, paper, scissors, lizard, spock];
 const tutorial = document.querySelector('.tutorial');
+const stages = {
+    START: 'start',
+    TOP: 'top',
+    BOTTOM: 'bottom',
+    BLOCKED: 'blocked',
+    GUARD_PASSED: 'guardPassed'
+}
 
 
 var difficulty = '';
